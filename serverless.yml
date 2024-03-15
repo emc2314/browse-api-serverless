@@ -1,3 +1,5 @@
+org: emc2314
+app: browse-api-serverless
 service: browse-api-serverless
 frameworkVersion: '3'
 
@@ -20,7 +22,7 @@ functions:
   browse-text:
     runtime: nodejs18.x
     handler: browse-text.handler
-    memorySize: 4096
+    memorySize: 3008
     timeout: 60
     ephemeralStorageSize: 10240
     url: true
@@ -29,9 +31,9 @@ functions:
     package:
       artifact: artifacts/browse-text.zip
   github:
-    runtime: python3.9
+    runtime: python3.10
     handler: github.handler
-    memorySize: 4096
+    memorySize: 3008
     timeout: 60
     ephemeralStorageSize: 10240
     url: true
@@ -40,9 +42,9 @@ functions:
     package:
       artifact: artifacts/github.zip
   pdf:
-    runtime: python3.9
+    runtime: python3.10
     handler: pdf.handler
-    memorySize: 4096
+    memorySize: 3008
     timeout: 60
     ephemeralStorageSize: 10240
     url: true
@@ -51,9 +53,9 @@ functions:
     package:
       artifact: artifacts/pdf.zip
   youtube:
-    runtime: python3.9
+    runtime: python3.10
     handler: youtube.handler
-    memorySize: 4096
+    memorySize: 3008
     timeout: 60
     ephemeralStorageSize: 10240
     url: true
